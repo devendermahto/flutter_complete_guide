@@ -5,14 +5,52 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  var questionIndex = 0;
+  void answerQuestion() {
+    questionIndex = questionIndex + 1;
+    print(questionIndex);
+  }
+
   @override
   Widget build(BuildContext context) {
+    var questions = [
+      'Q.1 All India Harijan Sangha established in?',
+      'Q.2 Mangal Pandey was a sepoy at?',
+      'Q.3 First battle of Panipat was fought between?',
+      'Q.4 Second battle of Panipat was fought between?',
+    ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('First Flutter App'),
+          title: Text(
+            'History Exam Quiz',
+          ),
         ),
-        body: Text('Some Data in Body of the app'),
+        body: Column(
+          children: [
+            Text(questions[questionIndex]),
+            Row(
+              children: [
+                RaisedButton(
+                  child: Text('RGR'),
+                  onPressed: answerQuestion,
+                ),
+                RaisedButton(
+                  child: Text('34th Bengal'),
+                  onPressed: answerQuestion,
+                ),
+                RaisedButton(
+                  child: Text('Sikh'),
+                  onPressed: answerQuestion,
+                ),
+                RaisedButton(
+                  child: Text('None'),
+                  onPressed: answerQuestion,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
