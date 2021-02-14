@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './question.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,24 +40,45 @@ class MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions[questionIndex]),
+            Question(questions[questionIndex]),
             Row(
               children: [
-                RaisedButton(
-                  child: Text('RGR'),
-                  onPressed: answerQuestion,
+                Container(
+                  margin: const EdgeInsets.only(
+                    left: 5.0,
+                  ),
+                  child: RaisedButton(
+                    child: Text('RGR'),
+                    onPressed: answerQuestion,
+                  ),
                 ),
-                RaisedButton(
-                  child: Text('34th Bengal'),
-                  onPressed: answerQuestion,
+                Container(
+                  margin: const EdgeInsets.only(
+                    left: 5.0,
+                  ),
+                  child: RaisedButton(
+                    child: Text('34th Bengal'),
+                    onPressed: answerQuestion,
+                  ),
                 ),
-                RaisedButton(
-                  child: Text('Sikh'),
-                  onPressed: answerQuestion,
+                Container(
+                  margin: const EdgeInsets.only(
+                    left: 5.0,
+                  ),
+                  child: RaisedButton(
+                    child: Text('Sikh'),
+                    onPressed: answerQuestion,
+                  ),
                 ),
-                RaisedButton(
-                  child: Text('None'),
-                  onPressed: answerQuestion,
+                Container(
+                  margin: const EdgeInsets.only(
+                    left: 5.0,
+                    right: 0,
+                  ),
+                  child: RaisedButton(
+                    child: Text('None'),
+                    onPressed: answerQuestion,
+                  ),
                 ),
               ],
             ),
