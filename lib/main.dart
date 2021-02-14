@@ -34,24 +34,21 @@ class MyAppState extends State<MyApp> {
     ];
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              'History Exam Quiz',
-            ),
+        appBar: AppBar(
+          title: Text(
+            'History Exam Quiz',
           ),
-          body: Column(
-            children: [
-              Question(questions[questionIndex]),
-              Row(
-                children: [
-                  Answer(),
-                  Answer(),
-                  Answer(),
-                  Answer(),
-                ],
-              ),
-            ],
-          )),
+        ),
+        body: Column(
+          children: [
+            Question(questions[questionIndex]),
+            Answer(),
+            Answer(),
+            Answer(),
+            Answer(),
+          ],
+        ),
+      ),
     );
   }
 }
