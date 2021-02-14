@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './question.dart';
+import './answer.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,58 +34,24 @@ class MyAppState extends State<MyApp> {
     ];
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'History Exam Quiz',
-          ),
-        ),
-        body: Column(
-          children: [
-            Question(questions[questionIndex]),
-            Row(
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(
-                    left: 5.0,
-                  ),
-                  child: RaisedButton(
-                    child: Text('RGR'),
-                    onPressed: answerQuestion,
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(
-                    left: 5.0,
-                  ),
-                  child: RaisedButton(
-                    child: Text('34th Bengal'),
-                    onPressed: answerQuestion,
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(
-                    left: 5.0,
-                  ),
-                  child: RaisedButton(
-                    child: Text('Sikh'),
-                    onPressed: answerQuestion,
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(
-                    left: 5.0,
-                    right: 0,
-                  ),
-                  child: RaisedButton(
-                    child: Text('None'),
-                    onPressed: answerQuestion,
-                  ),
-                ),
-              ],
+          appBar: AppBar(
+            title: Text(
+              'History Exam Quiz',
             ),
-          ],
-        ),
-      ),
+          ),
+          body: Column(
+            children: [
+              Question(questions[questionIndex]),
+              Row(
+                children: [
+                  Answer(),
+                  Answer(),
+                  Answer(),
+                  Answer(),
+                ],
+              ),
+            ],
+          )),
     );
   }
 }
